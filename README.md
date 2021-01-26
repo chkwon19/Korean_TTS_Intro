@@ -18,10 +18,10 @@
       text_cleaners=['basic_cleaners']
     # cleaners.py
       def basic_cleaners(text):
-      text = convert_to_ascii(text) 
-      #text = lowercase(text) 
-      text = collapse_whitespace(text)
-      return text
+          text = convert_to_ascii(text) 
+          #text = lowercase(text) 
+          text = collapse_whitespace(text)
+          return text
     # symbols.py
       _pad        = '_'
       _eos        = '~'
