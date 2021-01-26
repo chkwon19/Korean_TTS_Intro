@@ -10,7 +10,7 @@
     - [음원 다양화를 통하여 로봇의 감정 및 개성을 표현할 수 있는 대화음성합성 원천기술 개발](https://github.com/emotiontts/emotiontts_open_db/tree/master/Dataset/SpeechCorpus/Main/main/lmy)  
 
 - 한국어 텍스트를 입력으로 받기 위해서  
-    - 한국어 G2P(Grapheme-to-Phoneme) 변환 모듈 사용  
+    - 한국어 G2P(Grapheme-to-Phoneme) 변환 모듈을 사용하여 한국어 텍스트를 영어 음소 표기로 변환  
         - [Sogang G2P](https://github.com/emotiontts/emotiontts_open_db/tree/master/Codeset/SogangG2P)        
     - 영어 Text2Mel 오픈소스에서 다음을 수정   
      ```python  
@@ -26,6 +26,6 @@
       _pad        = '_'
       _eos        = '~'
       # G2P 모듈에서 사용하는 phoneme set 정의
-      _characters = 'gndlmbsjqktphxwfczAoOUuEae>0123456789[]<GNDLMB,.? ' # KCH
+      _characters = 'gndlmbsjqktphxwfczAoOUuEae>0123456789[]<GNDLMB,.? '
       symbols = [_pad, _eos] + list(_characters) 
     ```
