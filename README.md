@@ -15,17 +15,19 @@
     - 영어 Text2Mel 오픈소스에서 다음을 수정   
      ```python  
     # hparams.py
-      text_cleaners=['basic_cleaners']
+    text_cleaners=['basic_cleaners']
+    
     # cleaners.py
-      def basic_cleaners(text):
-          text = convert_to_ascii(text) 
-          #text = lowercase(text) 
-          text = collapse_whitespace(text)
-          return text
+    def basic_cleaners(text):
+      text = convert_to_ascii(text) 
+      #text = lowercase(text) 
+      text = collapse_whitespace(text)
+      return text
+    
     # symbols.py
-      _pad        = '_'
-      _eos        = '~'
-      # G2P 모듈에서 사용하는 phoneme set 정의
-      _characters = 'gndlmbsjqktphxwfczAoOUuEae>0123456789[]<GNDLMB,.? '
-      symbols = [_pad, _eos] + list(_characters) 
+    _pad        = '_'
+    _eos        = '~'
+    # G2P 모듈에서 사용하는 phoneme set 정의
+    _characters = 'gndlmbsjqktphxwfczAoOUuEae>0123456789[]<GNDLMB,.? '
+    symbols = [_pad, _eos] + list(_characters) 
     ```
